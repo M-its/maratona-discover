@@ -1,9 +1,11 @@
 /* --|- Global -|-- */
 :root {
     --dark-purple: #363F5F;
+    --dark-green: #2D4A22;
     --green: #49AA26;
     --light-green: #3DD705;
     --red: #E92929;
+    --light-gray: #f0f2f5;
 }
 * {
     margin: 0;
@@ -12,7 +14,7 @@
 }
 
 body {
-    background: #f0f2f5;
+    background: var(--light-gray);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -56,6 +58,45 @@ a {
 a:hover {
     color: var(--light-green);
 }
+/* theme button */
+#change-theme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+#change-theme label {
+    width: 50px;
+    height: 26px;
+    background-color: var(--light-gray);
+    border-radius: 50px;
+    position: relative;
+
+    display: flex;
+}
+#change-theme #toggler {
+    width: 22px;
+    height: 22px;
+    background-color: var(--dark-green);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s linear;
+}
+#change-theme #checkbox {
+    opacity: 0;
+    position: absolute;
+}
+#change-theme #checkbox:checked + label #toggler {
+    transform: translateX(24px);
+    background-color: #414141;
+}
+#change-theme #checkbox:checked + label {
+    background-color: #2c2c2c;
+    transition: background-color 200ms;
+}
+
+/* theme button */
 
 button {
     width: 100%;
@@ -105,7 +146,7 @@ button:hover {
 
 /* --|- Header -|-- */
 header {
-    background: #2D4A22;
+    background: var(--dark-green);
     padding: 3rem 0 10rem;
     text-align: center;
 }
@@ -239,7 +280,7 @@ td.expense {
 }
 
 .modal {
-    background: #F0F2F5;
+    background: var(--light-gray);
     padding: 2.4rem;
     position: relative;
     z-index: 1;

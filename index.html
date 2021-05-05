@@ -7,10 +7,20 @@
     <title>dev.finance$</title>
 
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dark-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
 </head>
     <body>
+
+        <div id="change-theme">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">
+                <div id="toggler"></div>
+            </label>
+        </div>
+
         <header>
             <img src="./assets/logo.svg" alt="Logo Dev Finance">
         </header>
@@ -114,6 +124,7 @@
 
         <footer><p>dev.finance$</p></footer>
 
-        <script src="./scripts.js"></script>
+        <script src="./scripts.js"></script>    
+        <script src="./change-theme.js"></script>
     </body>
 </html>
